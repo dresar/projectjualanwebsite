@@ -1,0 +1,397 @@
+/* Custom CSS for Portfolio Application */
+
+/* Additional animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+@keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate-3d {
+    0% { transform: perspective(1000px) rotateX(0) rotateY(0); }
+    50% { transform: perspective(1000px) rotateX(15deg) rotateY(15deg); }
+    100% { transform: perspective(1000px) rotateX(0) rotateY(0); }
+}
+
+/* Animation delay utilities */
+.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-1000 { animation-delay: 1000ms; }
+.animation-delay-1500 { animation-delay: 1500ms; }
+.animation-delay-2000 { animation-delay: 2000ms; }
+.animation-delay-3000 { animation-delay: 3000ms; }
+.animation-delay-4000 { animation-delay: 4000ms; }
+
+/* Floating animation class */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow effect */
+.pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Gradient background */
+.gradient-bg {
+    background: linear-gradient(-45deg, #3b82f6, #10b981, #f59e0b, #ef4444);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+}
+
+/* Morphing blob animation */
+.morphing-blob {
+    animation: morph 8s ease-in-out infinite;
+}
+
+/* Subtle bounce animation */
+.bounce-subtle {
+    animation: bounce-subtle 4s ease-in-out infinite;
+}
+
+/* 3D rotation effect */
+.rotate-3d {
+    animation: rotate-3d 8s ease-in-out infinite;
+}
+
+/* Glass morphism effect */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+    background: rgba(17, 24, 39, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #6B7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    /* Improved mobile spacing */
+    .py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    /* Better touch targets for mobile */
+    .nav-link, .mobile-nav-link, button {
+        padding: 0.75rem;
+    }
+    
+    /* Adjust skill bars for mobile */
+    .skill-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Improve project cards on mobile */
+    .project-card {
+        margin-bottom: 2rem;
+    }
+    
+    /* Better spacing for timeline on mobile */
+    .timeline-item {
+        padding-left: 50px;
+        padding-right: 15px;
+    }
+    
+    /* Adjust social icons for better mobile tapping */
+    .social-icons a {
+        margin: 0 0.75rem;
+        padding: 0.5rem;
+    }
+    
+    /* Improve form elements on mobile */
+    .form-input {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .py-20 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    /* Improved mobile layout */
+    .flex-col-mobile {
+        flex-direction: column;
+    }
+    
+    /* Center align content on small screens */
+    .text-center-mobile {
+        text-align: center;
+    }
+    
+    /* Adjust spacing for small screens */
+    .mb-mobile-8 {
+        margin-bottom: 2rem;
+    }
+    
+    /* Make buttons more prominent on mobile */
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        margin-bottom: 0.75rem;
+        padding: 0.875rem 1.5rem;
+    }
+    
+    /* Improve gallery layout on mobile */
+    .project-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Single column layout for very small screens */
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Adjust padding for very small screens */
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* Smaller font sizes for mobile */
+    .text-sm-mobile {
+        font-size: 0.875rem;
+    }
+    
+    /* Adjust animated elements for small screens */
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+}
+
+/* Project image gallery */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Modal for project images */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Contact form focus effects */
+.form-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Custom button styles */
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2), 0 2px 4px -1px rgba(59, 130, 246, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.05);
+}
+
+/* Skill badge styles */
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    background-color: rgba(59, 130, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+.skill-badge i {
+    margin-right: 0.5rem;
+}
+
+/* Dark mode toggle animation */
+.theme-toggle-icon {
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover .theme-toggle-icon {
+    transform: rotate(180deg);
+}
